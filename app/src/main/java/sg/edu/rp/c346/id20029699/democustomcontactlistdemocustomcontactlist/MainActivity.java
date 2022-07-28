@@ -3,7 +3,10 @@ package sg.edu.rp.c346.id20029699.democustomcontactlistdemocustomcontactlist;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.widget.ImageView;
 import android.widget.ListView;
+
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
@@ -13,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
     ListView lv;
     ArrayList<Contact> al;
     CustomAdapter CA;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

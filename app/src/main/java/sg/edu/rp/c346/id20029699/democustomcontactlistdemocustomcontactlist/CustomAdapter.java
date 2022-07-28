@@ -11,6 +11,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import com.squareup.picasso.Picasso;
+
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 
@@ -43,10 +45,16 @@ public class CustomAdapter extends ArrayAdapter{
         tvCode.setText("+" + currentItem.getCountryCode());
         tvNum.setText(currentItem.getPhoneNum() + "");
 
+        String imageURL = "http://i.imgur.com/tGbaZCY.jpg";
+        Picasso.with(parent_context).load(imageURL).into(ivGender);
+
         if (currentItem.getGender() == 'F'){
             ivGender.setImageResource(R.drawable.female);
+
+
         } else {
             ivGender.setImageResource(R.drawable.male);
+
         }
         return rowView;
     }
